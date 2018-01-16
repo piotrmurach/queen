@@ -2,11 +2,22 @@
 
 module Queen
   # A registry for all rules
+  #
+  # The storage is a key value store with the rule name
+  # as the key and the rule object as the value
+  #
+  # @api private
   class RuleRegistry
     def initialize
       @rules = {}
     end
 
+    # Register a new rule with the registry
+    #
+    # @param [String] name
+    # @param [Queen::Rule] rule
+    #
+    # @api public
     def set(name, rule, **options)
       @rules[name] = rule
     end
