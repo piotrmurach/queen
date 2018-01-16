@@ -14,7 +14,7 @@
 [coverage]: https://coveralls.io/github/piotrmurach/queen?branch=master
 [inchpages]: http://inch-ci.org/github/piotrmurach/queen
 
-> **Queen** is a English langauge linter that reports on spelling, grammar and other crimes against written word, and will help you hold your code and comments in high esteem.
+> **Queen** is an English langauge linter that reports on spelling, grammar, and other crimes against the written word, and will help you hold your code and comments in high esteem.
 
 ## Installation
 
@@ -34,19 +34,19 @@ Or install it yourself as:
 
 ## Usage
 
-Running `queen` command with no arguments will check all source files in the current directory:
+Running the `queen` command with no arguments will check all source files in the current directory:
 
 ```
 $ queen
 ```
 
-Alternatively, you can `specify` a list of files and/or directories to be scanned for, like so:
+Alternatively, you can `specify` a list of files and/or directories to be scanned, like so:
 
 ```
 $ queen lib spec file.rb
 ```
 
-For example, let's assumpe the following sentence by Freddie Mercury:
+For example, let's assume the following sentence by Freddie Mercury:
 
 ```ruby
 class Freddie
