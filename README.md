@@ -1,5 +1,19 @@
 # Queen
 
+[![Gem Version](https://badge.fury.io/rb/queen.svg)][gem]
+[![Build Status](https://secure.travis-ci.org/piotrmurach/queen.svg?branch=master)][travis]
+[![Build status](https://ci.appveyor.com/api/projects/status/e11tn1fgjwnfwp3r?svg=true)][appveyor]
+[![Maintainability](https://api.codeclimate.com/v1/badges/23e0a5aab6623aebd854/maintainability)][codeclimate]
+[![Coverage Status](https://coveralls.io/repos/github/piotrmurach/queen/badge.svg?branch=master)][coverage]
+[![Inline docs](http://inch-ci.org/github/piotrmurach/queen.svg?branch=master)][inchpages]
+
+[gem]: http://badge.fury.io/rb/queen
+[travis]: http://travis-ci.org/piotrmurach/queen
+[appveyor]: https://ci.appveyor.com/project/piotrmurach/queen
+[codeclimate]: https://codeclimate.com/github/piotrmurach/queen/maintainability
+[coverage]: https://coveralls.io/github/piotrmurach/queen?branch=master
+[inchpages]: http://inch-ci.org/github/piotrmurach/queen
+
 > **Queen** is a English langauge linter that reports on spelling, grammar and other crimes against written word, and will help you hold your code and comments in high esteem.
 
 ## Installation
@@ -34,7 +48,7 @@ $ queen lib spec file.rb
 
 For example, let's assumpe the following sentence by Freddie Mercury:
 
-```
+```ruby
 class Freddie
   def say
     "I'm just a musical prostitute, my dear."
@@ -79,4 +93,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/piotrm
 
 ## Copyright
 
-Copyright (c) 2017 Piotr Murach. See LICENSE for further details.
+Copyright (c) 2017-2018 Piotr Murach. See LICENSE for further details.
