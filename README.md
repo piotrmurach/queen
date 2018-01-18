@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/queen.svg)][gem]
 [![Build Status](https://secure.travis-ci.org/piotrmurach/queen.svg?branch=master)][travis]
-[![Build status](https://ci.appveyor.com/api/projects/status/e11tn1fgjwnfwp3r?svg=true)][appveyor]
+[![Build status](https://ci.appveyor.com/api/projects/status/atibfgu43dit3xkt?svg=true)][appveyor]
 [![Maintainability](https://api.codeclimate.com/v1/badges/23e0a5aab6623aebd854/maintainability)][codeclimate]
 [![Coverage Status](https://coveralls.io/repos/github/piotrmurach/queen/badge.svg?branch=master)][coverage]
 [![Inline docs](http://inch-ci.org/github/piotrmurach/queen.svg?branch=master)][inchpages]
