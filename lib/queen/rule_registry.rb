@@ -28,7 +28,7 @@ module Queen
 
     def each(&block)
       return to_enum unless block
-      rules.each(&block)
+      @rules.each(&block)
     end
 
     def length
