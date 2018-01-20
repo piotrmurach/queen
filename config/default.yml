@@ -1,0 +1,8 @@
+---
+rules:
+  profanity:
+    enabled: true
+    exclude: []
+  word_spelling:
+    enabled: true
+    exclude: []
