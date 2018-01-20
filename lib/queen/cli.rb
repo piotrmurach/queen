@@ -7,6 +7,7 @@ require_relative 'rule'
 require_relative 'rules/word_spelling'
 require_relative 'rules/profanity'
 
+require_relative 'config_loader'
 require_relative 'reporter'
 require_relative 'version'
 
@@ -51,14 +52,17 @@ module Queen
 
       total_reprimands = 0
       reporter = Reporter.new
+      config = ConfigLoader.load_file
 
       puts reporter.banner(@files)
 
       @files.each do |file|
         source = File.read(file)
 
-        Queen::Rule.rules.each do |rule_class|
-          rule = rule_class.new
+        Queen::Rule.rules.each do |rule_name, rule_class|
+          metadata = config.for_rule(rule_name)
+          rule = rule_class.new(metadata)
+          next unless rule.enabled?
           rule.check(source)
           total_reprimands += rule.reprimands.count
           if rule.reprimands.count.nonzero?
