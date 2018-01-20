@@ -63,7 +63,7 @@ Reviewing 1 file
 
 Reprimands:
 
-freddie.rb:1:20: Profanity: prostitute may be viewed as offensive.
+freddie.rb:3:25: prostitute may be viewed as offensive. Consider removing this word.
 
 1 file checked, 1 reprimand given.
 ```
@@ -82,6 +82,22 @@ $ queen -h (--help)
 | -r/--require  | Require Ruby file. |
 | --verbose     | Change log level to VERBOSE. |
 | -v/--version  | Display the current version and exit. |
+
+## Configuration
+
+
+All **Queen** rules are enabled by default and can be configured in `.queen.yml` file. Default configuration:
+
+```ruby
+---
+rules:
+  profanity:
+    enabled: true
+    exclude: []
+  word_spelling:
+    enabled: true
+    exclude: []
+```
 
 ## Development
 
