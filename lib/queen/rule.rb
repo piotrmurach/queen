@@ -10,6 +10,8 @@ module Queen
   class Rule
     extend Queen::Rules
 
+    CORPORA_PATH = Pathname(::File.join(__dir__, 'corpora')).freeze
+
     attr_reader :reprimands
 
     attr_reader :pastel

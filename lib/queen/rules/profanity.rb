@@ -17,7 +17,7 @@ module Queen
 
       def initialize(**options)
         super
-        file_path = ::File.join(__dir__, 'profanities.yml')
+        file_path = CORPORA_PATH.join('profanities.yml')
         @profanities_dict = YAML.load_file(file_path)
       end
 
