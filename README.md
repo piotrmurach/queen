@@ -94,7 +94,7 @@ rules:
   profanity:
     enabled: true
     exclude: []
-  word_spelling:
+  spelling:
     enabled: true
     exclude: []
 ```
