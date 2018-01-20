@@ -19,19 +19,25 @@ module Queen
     end
 
     def self.rules
-      rule_registry.rules
+      rule_registry
     end
 
     # Initializes a rule
     #
     # @api private
-    def initialize(**options)
+    def initialize(metadata = {})
       @reprimands = []
       @pastel = Pastel.new
+      @metadata = metadata
     end
 
     def add_reprimand(line, column, message)
       @reprimands << Reprimand[line, column, message]
+    end
+
+    # Check if the rule is enabled
+    def enabled?
+      @metadata.fetch(:enabled, true)
     end
 
     def name
