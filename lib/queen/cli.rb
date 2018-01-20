@@ -5,6 +5,7 @@ require 'logger'
 
 require_relative 'rule'
 require_relative 'rules/word_spelling'
+require_relative 'rules/profanity'
 
 require_relative 'reporter'
 require_relative 'version'
@@ -60,7 +61,9 @@ module Queen
           rule = rule_class.new
           rule.check(source)
           total_reprimands += rule.reprimands.count
-          puts reporter.report(file, rule)
+          if rule.reprimands.count.nonzero?
+            puts reporter.report(file, rule)
+          end
         end
       end
 

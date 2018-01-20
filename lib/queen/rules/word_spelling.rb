@@ -6,6 +6,8 @@ require_relative '../rule'
 
 module Queen
   module Rules
+    # Spell check words in a source.
+    # @api public
     class WordSpelling < Queen::Rule
 
       register 'word_spelling', WordSpelling
