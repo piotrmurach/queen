@@ -16,7 +16,7 @@ module Queen
       MSG = "%s might be viewed as profane. Consider removing this word."
 
       def initialize(**options)
-        super()
+        super
         file_path = ::File.join(__dir__, 'profanities.yml')
         @profanities_dict = YAML.load_file(file_path)
       end
