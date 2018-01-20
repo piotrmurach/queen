@@ -1,13 +1,13 @@
-require 'queen/rules/word_spelling'
+# frozen_string_literal: true
 
-RSpec.describe Queen::Rules::WordSpelling do
+RSpec.describe Queen::Rules::Spelling do
   it "defines a name" do
-    spelling = Queen::Rules::WordSpelling.new
-    expect(spelling.name).to eq('WordSpelling')
+    spelling = Queen::Rules::Spelling.new
+    expect(spelling.name).to eq('Spelling')
   end
 
-  it "cheks for word spelling reprimends" do
-    spelling = Queen::Rules::WordSpelling.new
+  it "cheks for word spelling reprimands" do
+    spelling = Queen::Rules::Spelling.new
 
     spelling.check('cookie')
 
@@ -15,7 +15,7 @@ RSpec.describe Queen::Rules::WordSpelling do
   end
 
   it "allows to change language" do
-    spelling = Queen::Rules::WordSpelling.new(lang: 'en_GB')
+    spelling = Queen::Rules::Spelling.new(lang: 'en_GB')
 
     spelling.check('colorize')
 
@@ -23,7 +23,7 @@ RSpec.describe Queen::Rules::WordSpelling do
   end
 
   it "finds no suggestions" do
-    spelling = Queen::Rules::WordSpelling.new
+    spelling = Queen::Rules::Spelling.new
 
     spelling.check('asdfadsfasdf')
     reprimand = spelling.reprimands.first
@@ -32,7 +32,7 @@ RSpec.describe Queen::Rules::WordSpelling do
   end
 
   it "provides suggestions for misspelled word" do
-    spelling = Queen::Rules::WordSpelling.new
+    spelling = Queen::Rules::Spelling.new
 
     spelling.check('cookei')
 
@@ -43,7 +43,7 @@ RSpec.describe Queen::Rules::WordSpelling do
   end
 
   it "provides misspellings for a text" do
-    spelling = Queen::Rules::WordSpelling.new
+    spelling = Queen::Rules::Spelling.new
     text = "There is a cookei on a table.\nAnd a botle of mikl."
 
     spelling.check(text)

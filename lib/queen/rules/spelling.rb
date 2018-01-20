@@ -8,9 +8,9 @@ module Queen
   module Rules
     # Spell check words in a source.
     # @api public
-    class WordSpelling < Queen::Rule
+    class Spelling < Queen::Rule
 
-      register 'word_spelling', WordSpelling
+      register 'spelling', Spelling
 
       # The Regexp to use for scanning in words.
       WORD_REGEXP = /[^\W_][\w'-]*[^\W_]/
@@ -59,6 +59,6 @@ module Queen
       def split_text_to_words(text)
         text.scan(WORD_REGEXP)
       end
-    end # WordSpelling
+    end # Spelling
   end # Rules
 end # Queen

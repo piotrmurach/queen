@@ -4,7 +4,7 @@ require 'optparse'
 require 'logger'
 
 require_relative 'rule'
-require_relative 'rules/word_spelling'
+require_relative 'rules/spelling'
 require_relative 'rules/profanity'
 
 require_relative 'config_loader'
